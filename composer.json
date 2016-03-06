@@ -1,0 +1,16 @@
+{
+	"name": "romaricp/instagram",
+	"type": "library",
+	"description": "The simple PHP Class for accessing Instagram's API",
+	"keywords": ["instagram", "api", "php"],
+	"homepage": "https://github.com/romaricp/api-instagram-with-php",
+	"require": {
+		"php": ">=5.3.0",
+		"ext-curl": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"RomaricP\\Instagram\\": "src"
+		}
+	}
+}
