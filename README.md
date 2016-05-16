@@ -1,4 +1,4 @@
-# ![Image](example/assets/instagram.png) Instagram PHP API V2
+# Class PHP to use Instagram API v2 (2016)
 
 > **Note:** On the 17 Nov 2015 [Instagram](http://developers.instagram.com/post/133424514006/instagram-platform-update) made [changes to their API ](https://instagram.com/developer/changelog/). Apps created before Nov 17, 2015 wont be affected until Jun 2016. Apps created on or after Nov 17 2015 will require to use their updated API. Please note that this library doesn't yet support their new updates. For more information, please see [#182](https://github.com/cosenary/Instagram-PHP-API/issues/182).
 
@@ -23,7 +23,7 @@ To use the Instagram API you have to register yourself as a developer at the [In
 
 ---
 
-Please note that Instagram mainly refers to »Clients« instead of »Apps«. So »Client ID« and »Client Secret« are the same as »App Key« and »App Secret«.
+Please note that Instagram mainly refers to B;ClientsB+ instead of B;AppsB+. So B;Client IDB+ and B;Client SecretB+ are the same as B;App KeyB+ and B;App SecretB+.
 
 ---
 
