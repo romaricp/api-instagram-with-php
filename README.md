@@ -1,46 +1,33 @@
 # Class PHP to use Instagram API v2 (2016)
-
-> **Note:** On the 17 Nov 2015 [Instagram](http://developers.instagram.com/post/133424514006/instagram-platform-update) made [changes to their API ](https://instagram.com/developer/changelog/). Apps created before Nov 17, 2015 wont be affected until Jun 2016. Apps created on or after Nov 17 2015 will require to use their updated API. Please note that this library doesn't yet support their new updates. For more information, please see [#182](https://github.com/cosenary/Instagram-PHP-API/issues/182).
+> **Note:** On the 17 Nov 2015 [Instagram](http://developers.instagram.com/post/133424514006/instagram-platform-update) made [changes to their API ](https://instagram.com/developer/changelog/). Apps created before Nov 17, 2015 wont be affected until Jun 2016. Apps created on or after Nov 17 2015 will require to use their updated API. Please note that this library doesn't yet support their new updates.
 
 A PHP wrapper for the Instagram API. Feedback or bug reports are appreciated.
 
-[![Total Downloads](http://img.shields.io/packagist/dm/cosenary/instagram.svg?style=flat)](https://packagist.org/packages/cosenary/instagram)
-[![Latest Stable Version](http://img.shields.io/packagist/v/cosenary/instagram.svg?style=flat)](https://packagist.org/packages/cosenary/instagram)
-[![License](https://img.shields.io/packagist/l/cosenary/instagram.svg?style=flat)](https://packagist.org/packages/cosenary/instagram)
+[![Total Downloads](http://img.shields.io/packagist/dm/romaricp/instagram.svg?style=flat)](https://packagist.org/packages/romaricp/instagram)
+[![Latest Stable Version](http://img.shields.io/packagist/v/romaricp/instagram.svg?style=flat)](https://packagist.org/packages/romaricp/instagram)
+[![License](https://img.shields.io/packagist/l/romaricp/instagram.svg?style=flat)](https://packagist.org/packages/romaricp/instagram)
 
 > [Composer](#installation) package available.  
 > Supports [Instagram Video](#instagram-videos) and [Signed Header](#signed-header).
 
 ## Requirements
-
 - PHP 5.3 or higher
 - cURL
 - Registered Instagram App
 
 ## Get started
-
 To use the Instagram API you have to register yourself as a developer at the [Instagram Developer Platform](http://instagr.am/developer/register/) and create an application. Take a look at the [uri guidelines](#samples-for-redirect-urls) before registering a redirect URI. You will receive your `client_id` and `client_secret`.
 
----
-
-Please note that Instagram mainly refers to B;ClientsB+ instead of B;AppsB+. So B;Client IDB+ and B;Client SecretB+ are the same as B;App KeyB+ and B;App SecretB+.
-
----
-
-> A good place to get started is the [example project](example/README.md).
-
 ### Installation
-
 I strongly advice using [Composer](https://getcomposer.org) to keep updates as smooth as possible.
 
 ```
-$ composer require cosenary/instagram
+$ composer require romaricp/instagram
 ```
 
 ### Initialize the class
-
 ```php
-use MetzWeb\Instagram\Instagram;
+use RomaricP\Instagram\Instagram;
 
 $instagram = new Instagram(array(
 	'apiKey'      => 'YOUR_APP_KEY',
@@ -52,7 +39,6 @@ echo "<a href='{$instagram->getLoginUrl()}'>Login with Instagram</a>";
 ```
 
 ### Authenticate user (OAuth2)
-
 ```php
 // grab OAuth callback code
 $code = $_GET['code'];
@@ -61,31 +47,12 @@ $data = $instagram->getOAuthToken($code);
 echo 'Your username is: ' . $data->user->username;
 ```
 
-### Get user likes
-
-```php
-// set user access token
-$instagram->setAccessToken($data);
-
-// get all user likes
-$likes = $instagram->getUserLikes();
-
-// take a look at the API response
-echo '<pre>';
-print_r($likes);
-echo '<pre>';
-```
 
 **All methods return the API data `json_decode()` - so you can directly access the data.**
 
 ## Available methods
 
 ### Setup Instagram
-
-`new Instagram(<array>/<string>);`
-
-`array` if you want to authenticate a user and access its data:
-
 ```php
 new Instagram(array(
 	'apiKey'      => 'YOUR_APP_KEY',
@@ -343,25 +310,6 @@ Iteration with `do-while` loop.
 
 > If you need further information about an endpoint, take a look at the [Instagram API docs](http://instagram.com/developer/authentication/).
 
-## Example App
-
-![Image](http://cl.ly/image/221T1g3w3u2J/preview.png)
-
-This example project, located in the `example/` folder, helps you to get started.
-The code is well documented and takes you through all required steps of the OAuth2 process.
-Credit for the awesome Instagram icons goes to [Ricardo de Zoete Pro](http://dribbble.com/RZDESIGN).
-
-#### More examples and tutorials:
-
-- [User likes](https://gist.github.com/cosenary/3287237)
-- [Follow user](https://gist.github.com/cosenary/8322459)
-- [User follower](https://gist.github.com/cosenary/7267139)
-- [Load more button](https://gist.github.com/cosenary/2975779)
-- [User most recent media](https://gist.github.com/cosenary/1711218)
-- [Instagram login](https://gist.github.com/cosenary/8803601)
-- [Instagram signup (9lessons tutorial)](http://www.9lessons.info/2012/05/login-with-instagram-php.html)
-- [Laravel Wrapper](https://github.com/vinkla/instagram)
-
 > Let me know if you have to share a code example, too.
 
 ## Changelog
@@ -371,5 +319,4 @@ Please see the [changelog file](CHANGELOG.md) for more information.
 ## Credits
 
 Copyright (c) 2011-2015 - Programmed by Christian Metz
-
 Released under the [BSD License](LICENSE).
