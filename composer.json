@@ -8,6 +8,15 @@
 		"php": ">=5.3.0",
 		"ext-curl": "*"
 	},
+    "authors": [
+        {
+            "name": "Christian Metz"
+        },
+        {
+            "name": "RomaricP",
+            "email": "romaric.paul@gmail.com"
+        }
+    ],
 	"autoload": {
 		"psr-4": {
 			"RomaricP\\Instagram\\": "src"
