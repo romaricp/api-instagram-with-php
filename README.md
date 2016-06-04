@@ -15,7 +15,7 @@ A PHP wrapper for the Instagram API. Feedback or bug reports are appreciated.
 
 - PHP 5.3 or higher
 - cURL
-- Registered Instagram App
+- Registered Instagram App with new scope 2016
 
 ## Get started
 
@@ -342,25 +342,6 @@ Iteration with `do-while` loop.
 </table>
 
 > If you need further information about an endpoint, take a look at the [Instagram API docs](http://instagram.com/developer/authentication/).
-
-## Example App
-
-![Image](http://cl.ly/image/221T1g3w3u2J/preview.png)
-
-This example project, located in the `example/` folder, helps you to get started.
-The code is well documented and takes you through all required steps of the OAuth2 process.
-Credit for the awesome Instagram icons goes to [Ricardo de Zoete Pro](http://dribbble.com/RZDESIGN).
-
-#### More examples and tutorials:
-
-- [User likes](https://gist.github.com/cosenary/3287237)
-- [Follow user](https://gist.github.com/cosenary/8322459)
-- [User follower](https://gist.github.com/cosenary/7267139)
-- [Load more button](https://gist.github.com/cosenary/2975779)
-- [User most recent media](https://gist.github.com/cosenary/1711218)
-- [Instagram login](https://gist.github.com/cosenary/8803601)
-- [Instagram signup (9lessons tutorial)](http://www.9lessons.info/2012/05/login-with-instagram-php.html)
-- [Laravel Wrapper](https://github.com/vinkla/instagram)
 
 > Let me know if you have to share a code example, too.
 

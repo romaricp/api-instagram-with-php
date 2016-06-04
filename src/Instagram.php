@@ -8,7 +8,7 @@ namespace RomaricP\Instagram;
  * API Documentation: http://instagram.com/developer/
  * Class Documentation: https://github.com/romaricp/api-instagram-with-php
  *
- * @author Romaric Paul - Christian Metz
+ * @author Romaric Paul fork Christian Metz's work
  * @since 05.03.2016
  * @copyright Romaric PAUL
  * @version 1.0
